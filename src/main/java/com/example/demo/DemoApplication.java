@@ -7,10 +7,10 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.stereotype.Controller;
 
 
-@Controller
+//@Controller
 @SpringBootApplication
-@Configuration
-@EnableAutoConfiguration
+//@Configuration
+//@EnableAutoConfiguration
 public class DemoApplication {
 
     public static void main(String[] args) {
