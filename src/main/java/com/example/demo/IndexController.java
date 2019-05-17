@@ -14,7 +14,7 @@ public class IndexController {
 
     @RequestMapping(value = "/")
     public String index(Map<String, Object> map){
-        System.out.println("----> index.html");
+        System.out.println("----> IndexController");
         map.put("name", "Ryan");
         return "index";
     }
