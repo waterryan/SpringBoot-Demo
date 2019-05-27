@@ -17,7 +17,7 @@ public class FileUploadController {
     @PostMapping(value="/upload")
     public String upload(HttpServletRequest request,
                          @RequestParam("description") String description,
-                         @RequestParam("file")MultipartFile file) throws Exception{
+                         @RequestParam("file") MultipartFile file) throws Exception{
 
         System.out.println("====> FileUploadController");
         System.out.println("Description = " + description);
@@ -28,6 +28,8 @@ public class FileUploadController {
             System.out.println("path = " + path);
 
             String fileName = file.getOriginalFilename();
+
+            // 会默认限制文件大小
             File filePath = new File(path, fileName);
             if (!filePath.getParentFile().exists()){
                 filePath.getParentFile().mkdirs();
