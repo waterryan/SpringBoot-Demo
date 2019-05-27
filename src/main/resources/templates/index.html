@@ -43,7 +43,8 @@
     </head>
 
     <body>
-        <h1>>>>> <span th:text="${name}"></span>，你好！</h1>
+        <!--缺省值：Rao-->
+        <h1>>>> <span th:text="${name}">Rao</span>，你好！</h1>
         <h2>成功运行！</h2>
 
         <div class="panel panel-primary">
@@ -86,10 +87,25 @@
                 <a th:href="@{iftest}">测试条件判断</a>
                 <br>
                 <a th:href="@{eachtest}">测试循环</a>
+                <br>
+                <!--<a th:href="@{fileupload}">上传文件</a>-->
 
-                <!--<div>-->
-                    <!---->
-                <!--</div>-->
+                <div>
+                    <div class="panel panel-primary">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">文件上传下载</h3>
+                        </div>
+
+                    </div>
+
+                    <form class="form-horizontal" action="/upload" enctype="multipart/form-data" method="post">
+                        <input class="form-control" placeholder="文件描述" type="text" name="description"/>
+                        <input class="form-control" placeholder="请选择文件" type="file" name="file"/>
+                        <button type="submit" class="btn btn-success" id="submitbtn">文件上传</button>
+                    </form>
+
+                </div>
+
             </div>
 
 

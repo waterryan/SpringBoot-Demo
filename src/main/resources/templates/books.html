@@ -25,14 +25,16 @@
                         <table class="table table-bordered table-hover">
                             <thead>
                                 <th class="text-center">封面</th>
+                                <th class="text-center">图片路径</th>
                                 <th class="text-center">书名</th>
                                 <th class="text-center">作者</th>
                             </thead>
                             <tbody class="text-center">
                                 <tr th:each="book: ${books}">
-                                    <td><img src="1.png" th:src="@{${book.image}}" height="60"/> </td>
-                                    <td th:text="${book.title}">书名</td>
-                                    <td th:text="${book.author}">作者</td>
+                                    <td><img src="1.png" th:src="@{${book.image}}" height="60"/></td>
+                                    <td th:text="@{${book.image}}">路径缺省值</td>
+                                    <td th:text="${book.title}">书名缺省值</td>
+                                    <td th:text="${book.author}">作者缺省值</td>
                                 </tr>
                             </tbody>
                         </table>
