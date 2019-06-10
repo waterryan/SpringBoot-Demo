@@ -12,9 +12,11 @@ public class LoginController {
             @RequestParam("loginName") String loginName,
             @RequestParam("password") String password,
             ModelAndView mv
-    ){
+        ){
+
         System.out.println("----> LoginController");
         System.out.println("----> loginName: " + loginName + ", Password: " + password);
+        // 重定向到main请求
         mv.setViewName("redirect:/main");
         return mv;
     }

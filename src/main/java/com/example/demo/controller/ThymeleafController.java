@@ -10,7 +10,9 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
-
+/***
+ * 用于演示thymeleaf模版的功能
+ */
 @Controller
 public class ThymeleafController {
 
